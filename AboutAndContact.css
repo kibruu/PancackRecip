@@ -1,0 +1,80 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASE */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #c9a8a8;
+  color: #333;
+  padding: 30px;
+}
+
+/* HOME BUTTON */
+.home-btn {
+  display: inline-block;
+
+  background: #b83740;
+  color: white;
+
+  padding: 12px 20px;
+  border-radius: 8px;
+
+  text-decoration: none;
+  font-weight: bold;
+
+  margin-bottom: 30px;
+
+  /*transition: background 0.2s ease;*/
+}
+
+.home-btn:hover {
+  background: #922c34;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* PAGE TITLE */
+.page-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* GRID LAYOUT */
+.grid {
+  display: grid;
+  /*background-color: red;*/
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  background: white;
+
+  padding: 20px;
+
+  border-radius: 10px;
+  border: 2px solid #b83740;
+
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  color: #b83740;
+}

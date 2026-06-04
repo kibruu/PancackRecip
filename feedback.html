@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Betygsätt Pannkakor</title>
+
+    <link rel="stylesheet" href="feedback.css" />
+  </head>
+
+  <body>
+    <!-- NAVIGATION -->
+    <nav aria-label="Sidnavigation">
+      <a href="indexNew.html">← Home</a>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+      <section class="feedback-section">
+        <header>
+          <h1 id="form-title">Betygsätt Pannkakor</h1>
+          <p>
+            Berätta hur dina pannkakor blev. Din feedback hjälper oss att
+            förbättra receptet.
+          </p>
+        </header>
+
+        <form class="feedback-form" action="#" method="post">
+          <!-- PERSON -->
+          <fieldset>
+            <legend>Personuppgifter</legend>
+
+            <label for="name">Namn *</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              autocomplete="name"
+              required
+            />
+
+            <label for="email">E-post *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+            />
+
+            <label for="age">Ålder</label>
+            <input type="number" id="age" name="age" min="1" max="120" />
+          </fieldset>
+
+          <!-- RECIPE -->
+          <fieldset>
+            <legend>Receptupplevelse</legend>
+
+            <label for="date">När lagade du dem?</label>
+            <input type="date" id="date" name="date" />
+
+            <label for="rating">Betyg (1–5)</label>
+            <input
+              type="range"
+              id="rating"
+              name="rating"
+              min="1"
+              max="5"
+              value="3"
+            />
+
+            <label for="servings">Portioner</label>
+            <input
+              type="number"
+              id="servings"
+              name="servings"
+              min="1"
+              max="20"
+            />
+
+            <label for="sås">Favoritsås</label>
+            <select id="sås" name="sås">
+              <option value="" disabled selected>Välj ett alternativ</option>
+              <option value="">Kolasås</option>
+              <option value="jam">Chokladsås</option>
+              <option value="cream">Vaniljsås</option>
+              <option value="berries">Lönnsirap</option>
+              <option value="icecream">Honung</option>
+            </select>
+          </fieldset>
+
+          <!-- EXTRAS -->
+          <fieldset>
+            <legend>Tillbehör</legend>
+
+            <p>Välj vad du använde:</p>
+
+            <label>
+              <input type="checkbox" name="extras" value="jam" />
+              Sylt
+            </label>
+
+            <label>
+              <input type="checkbox" name="extras" value="cream" />
+              Grädde
+            </label>
+
+            <label>
+              <input type="checkbox" name="extras" value="berries" />
+              Bär
+            </label>
+            <label>
+              <input type="checkbox" name="extras" value="icecream" />
+              Glass
+            </label>
+          </fieldset>
+
+          <!-- RECOMMENDATION -->
+          <fieldset>
+            <legend>Rekommendation</legend>
+
+            <p>Skulle du rekommendera receptet?</p>
+
+            <label>
+              <input type="radio" name="recommend" value="yes" required />
+              Ja
+            </label>
+
+            <label>
+              <input type="radio" name="recommend" value="no" />
+              Nej
+            </label>
+          </fieldset>
+
+          <!-- COMMENTS -->
+          <fieldset>
+            <legend>Kommentar</legend>
+
+            <label for="comments">Din feedback</label>
+            <textarea id="comments" name="comments" rows="5"></textarea>
+
+            <label for="photo">Ladda upp bild</label>
+            <input type="file" id="photo" name="photo" accept="image/*" />
+          </fieldset>
+
+          <button type="submit" class="submit-btn">Skicka recension</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
